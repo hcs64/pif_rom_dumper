@@ -1,7 +1,13 @@
-// Dump PIF ROM data to the first 2k of SRAM
+// Dump PIF ROM to the first 2k of SRAM
+//
 // This includes a bit of PIF RAM and registers at the end.
+// The idea is that since WatchLo is preserved on reset, we can get a
+// Watch excpetion while our old handler is still resident, before PIF ROM
+// is disabled.
+//
 // Thanks to Zoinkity for the idea.
 // Almost everything in LIB is by Peter Lemon (krom), thanks for all the help!
+// SRAM interface from Visor's Neon64 w/ Savestates
 // -hcs 2020-05-31
 
 arch n64.cpu
