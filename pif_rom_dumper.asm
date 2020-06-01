@@ -112,13 +112,13 @@ Start:
 
 -;j -;nop
 
++
+
+// Print the start of what we dumped
   la a0, ok_msg
   jal PrintStr255
   nop
 
-+
-
-// Print the start of what we dumped
   la s2, space_msg
   lli s1, 8
   la s0, pif_copy
