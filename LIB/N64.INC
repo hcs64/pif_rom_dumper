@@ -359,15 +359,17 @@ macro scope N64_HEADER(evaluate entrypoint, title) {
 
   dd 0 // UNUSED
 
-// PROGRAM TITLE (27 Byte ASCII String)
+// PROGRAM TITLE (20 Byte ASCII String)
 title_start:
   db {title}
   evaluate title_len(pc() - title_start)
-  if {title_len} > 27 {
+  if {title_len} > 20 {
     error "title is too long"
   } else {
-    fill 27 - {title_len}
+    fill 20 - {title_len}, ' '
   }
+
+  fill 7 // UNUSED
 
 // DEVELOPER ID CODE 
   db $00 // "N" = Nintendo
