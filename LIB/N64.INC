@@ -375,12 +375,11 @@ title_start:
   db $00 // "N" = Nintendo
 
 // CARTRIDGE ID CODE
-  db $00
-
-  db 0 // UNUSED
+  db 'E' // Use homebrew header to declare that we're using SRAM
+  db 'D' // See https://n64brew.dev/wiki/ROM_Header#Advanced_Homebrew_ROM_Header
 
 // COUNTRY CODE 
   db $00 // "D" = Germany, "E" = USA, "J" = Japan, "P" = Europe, "U" = Australia
 
-  db 0 // UNUSED
+  db $30 // 256k SRAM
 }
