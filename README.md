@@ -11,13 +11,13 @@ To use:
 
 ## Notes for Everdrive
 
-Locate the `save_db.txt` file in the `ED64` directory on your SD card. Add this line to the CRC detection section:
+When you successfully run the dumper, a save file called `pif_rom_dumper.srm` will be created in the `ED64\Saves` directory.
+
+The save type is specified in the header, so it should no longer be necessary to modify `save_db.txt` on Everdrive. For historical reference, this was once done by adding a line in the CRC detection section:
 
 ```
 0x5716C25D=3 (pif_rom_dumper)
 ```
-
-When you successfully run the dumper, a save file called `pif_rom_dumper.srm` will be created in the `ED64\Saves` directory.
 
 ## Notes for 64drive
 
